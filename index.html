@@ -178,35 +178,10 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
-        <div class="content has-text-justified">
-          <p>
-            Our framework, <b>Reinforced Agent Merging (RAM)</b>, addresses the task-vector mismatch between RL and SFT. 
-            The pipeline consists of three main steps:
-          </p>
-          
-          <img src="./static/images/ram.png" alt="Method Pipeline" style="width: 100%; margin: 20px 0;"/>
-          
-          <p>
-            1. <b>Disentanglement:</b> We separate shared knowledge (common across agents) from unique knowledge (task-specific).<br>
-            2. <b>Selective Preservation:</b> Instead of global averaging, we apply a mask to preserve the magnitude of unique updates.<br>
-            3. <b>Rescaling:</b> Parameters are rescaled to ensure the merged model retains the specialized capabilities of the original agents.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
     
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Results</h2>
+        <h2 class="title is-3">Motivations</h2>
         
         <div class="content has-text-justified">
           <p>
@@ -238,6 +213,34 @@
   </div>
 </section>
 
+  
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our framework, <b>Reinforced Agent Merging (RAM)</b>, addresses the task-vector mismatch between RL and SFT. 
+            The pipeline consists of three main steps:
+          </p>
+          
+          <img src="./static/images/ram.png" alt="Method Pipeline" style="width: 100%; margin: 20px 0;"/>
+          
+          <p>
+            1. <b>Disentanglement:</b> We separate shared knowledge (common across agents) from unique knowledge (task-specific).<br>
+            2. <b>Selective Preservation:</b> Instead of global averaging, we apply a mask to preserve the magnitude of unique updates.<br>
+            3. <b>Rescaling:</b> Parameters are rescaled to ensure the merged model retains the specialized capabilities of the original agents.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
 
 <section class="hero is-small">
   <div class="hero-body">
@@ -245,13 +248,13 @@
       <h2 class="title is-3 has-text-centered">Results</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item">
-          <img src="./static/images/results1.jpg" alt="Visualization 1"/>
+          <img src="./static/images/result1.jpg" alt="Visualization 1"/>
           <h2 class="subtitle has-text-centered">
             Main results of agent merging. We evaluate the capabilities across three domains: Coding (LiveBench, LiveCodeBench), Tool Use (Live, Non-Live), and Memory (RULER-HotpotQA, RULER-SQuAD). Bold and underlined values denote the best and second-best performance among merged models, respectively. Cells highlighted in red indicate the best performance across all evaluated models, including the specialized Task Models.
           </h2>
         </div>
         <div class="item">
-          <img src="./static/images/results2.jpg" alt="Visualization 2"/>
+          <img src="./static/images/result2.jpg" alt="Visualization 2"/>
           <h2 class="subtitle has-text-centered">
             The performances of merging two agents across domains.
           </h2>
