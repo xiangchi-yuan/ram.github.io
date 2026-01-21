@@ -99,7 +99,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                <a href="https://arxiv.org/pdf/2601.13572" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -108,7 +108,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                <a href="https://arxiv.org/abs/2601.13572" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -187,8 +187,6 @@
           <h3 class="title is-4">1. Heterogeneity in Reinforced Task Vectors</h3>
           <p>
             Existing model merging methods typically assume that task vectors are dense and globally comparable (similar to SFT updates). However, our analysis reveals a critical <b>mismatch</b> between these assumptions and the nature of Reinforcement Learning (RL).
-          </p>
-          <p>
             As shown in <b>Figure 2</b>, RL-induced task vectors exhibit extreme <b>sparsity</b> and <b>heterogeneity</b>. For instance, the coding agent modifies only 3.2% of parameters, whereas memory agents update over 54%. More importantly, these updates are distributed across disparate regions of the parameter space, creating unique, non-overlapping patterns for different capabilities.
           </p>
         </div>
@@ -206,10 +204,7 @@
           <h3 class="title is-4">2. The "Signal Dilution" Problem</h3>
           <p>
             Why do standard merging methods fail in this regime? The culprit is a phenomenon we term <b>Signal Dilution</b>. 
-          </p>
-          <p>
             Standard methods rely on global averaging (e.g., <code>1/N</code>). When an agent has a "unique" update for a specific parameter (while others do not), averaging divides this critical signal by the number of models, effectively treating the zero-updates from other agents as valid data. 
-            <br><br>
             <b>Figure 3</b> demonstrates the impact of this dilution. Unique regions drive significant performance gains (orange bars). However, when we simulate standard averaging by diluting these unique vectors (teal bars), the performance drops sharply. This necessitates a method like RAM, which can disentangle and preserve these unique signals.
           </p>
         </div>
@@ -273,9 +268,9 @@
           </h2>
         </div>
         <div class="item">
-          <img src="./static/images/carousel3.jpg" alt="Visualization 3"/>
+          <img src="./static/images/result3.png" alt="Visualization 3"/>
           <h2 class="subtitle has-text-centered">
-            Merged model performance.
+            Merging results for RL agents trained from Llama3.2-3B-Instruction base model.
           </h2>
         </div>
       </div>
